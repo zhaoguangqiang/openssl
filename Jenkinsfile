@@ -6,7 +6,7 @@ pipeline {
         stage('Build') {
           steps {
             echo 'building....'
-            bat(script: 'python', returnStatus: true, returnStdout: true)
+            bat(script: 'python test.py ${buildParam}', returnStatus: true, returnStdout: true)
             sleep 10
           }
         }
@@ -14,6 +14,7 @@ pipeline {
           steps {
             echo 'build another file'
             sleep 10
+            bat(script: 'python test.py ${buildParam}', returnStatus: true)
           }
         }
       }
