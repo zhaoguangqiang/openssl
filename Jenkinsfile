@@ -7,11 +7,13 @@ pipeline {
           steps {
             echo 'building....'
             bat(script: 'python', returnStatus: true, returnStdout: true)
+            sleep 5
           }
         }
         stage('Build1') {
           steps {
             echo 'build another file'
+            sleep 5
           }
         }
       }
