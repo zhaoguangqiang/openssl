@@ -4,6 +4,7 @@ pipeline {
     stage('Build') {
       steps {
         echo 'building....'
+        bat(script: 'python', returnStatus: true, returnStdout: true)
       }
     }
     stage('Test') {
