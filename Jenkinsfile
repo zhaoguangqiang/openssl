@@ -29,4 +29,8 @@ pipeline {
       }
     }
   }
+  environment {
+    buildParam = 'buildParam1'
+    build1Param = 'buildParam2'
+  }
 }
