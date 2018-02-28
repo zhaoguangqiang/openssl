@@ -14,7 +14,7 @@ pipeline {
           steps {
             echo 'build another file'
             sleep 10
-            bat(script: 'python test.py \\"${build1Param}\\"', returnStatus: true)
+            bat(script: 'python test.py "${build1Param}"', returnStatus: true)
           }
         }
       }
